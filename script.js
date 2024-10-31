@@ -1,56 +1,20 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
 
-nav {
-    background: #444;
-    color: #fff;
-    padding: 10px 0;
-}
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-    background: #fff;
-    border-radius: 5px;
-}
-
-.project {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-}
+// Alert when the contact section is clicked
+document.getElementById('contact').addEventListener('click', () => {
+    alert('Feel free to reach out via email or LinkedIn!');
+});
