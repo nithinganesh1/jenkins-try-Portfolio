@@ -1,56 +1,82 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    color: #333;
+    background: #f4f4f9;
 }
 
-header {
+.header {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 1.5em;
     text-align: center;
-}
-
-nav {
-    background: #444;
-    color: #fff;
-    padding: 10px 0;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
+    background: #555;
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 1em;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    padding: 0.5em;
 }
 
-section {
-    padding: 20px;
-    margin: 10px;
-    background: #fff;
-    border-radius: 5px;
+nav ul li a:hover {
+    background: #444;
 }
 
-.project {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-footer {
+.section {
+    padding: 2em;
     text-align: center;
-    padding: 10px 0;
+}
+
+.projects .project {
+    background: #e8e8e8;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+button {
+    padding: 0.7em 1.5em;
     background: #333;
     color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+.contact-form label, 
+.contact-form input, 
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5em 0;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 0.5em;
+    border: 1px solid #ddd;
 }
