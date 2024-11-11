@@ -1,20 +1,16 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+// Function to show the contact form
+function showContactForm() {
+    document.getElementById('contactForm').classList.toggle('hidden');
+}
 
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+// Function to handle form submission
+function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Alert when the contact section is clicked
-document.getElementById('contact').addEventListener('click', () => {
-    alert('Feel free to reach out via email or LinkedIn!');
-});
+    alert(`Thank you, ${name}! Your message has been sent.`);
+    // Reset the form
+    document.getElementById('contactForm').reset();
+}
