@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset style */
 * {
     margin: 0;
     padding: 0;
@@ -80,3 +80,4 @@ button:hover {
     padding: 0.5em;
     border: 1px solid #ddd;
 }
+
